@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+header {
+	width: 15%;
+	min-width: 25vh;
+	height: 100vh;
+	
+	background-color: #35866B;
+	
+	display: flex;
+	align-content: center;
+	align-items: center;
+
+}
+
+header > wrap {
+	height: 98%;
+	
+	display: flex;
+	flex-direction: column;
+	flex: auto;
+	
+	align-content: center;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.menu {
+	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+	
+	justify-content: space-between;
+	
+	width: 80%;
+	height: 80%;
+}
+
+.menu > .logo {
+	width: 5%;
+	height: 5%;
+	
+	min-width: 64px;
+	min-height: 64px;
+}
+
+.menu > .submenu {
+	
+	min-height: 15vh;
+	height: 70%;
+	width: 70%;
+	
+	list-style: none;
+	
+	display: flex;
+	flex-direction: column;
+	
+	align-content: center;
+	align-items: center;
+	
+	justify-content: space-between;
+	
+}
+
+.submenu > li {
+	text-align: center;
+	
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	font-size: 120%;
+	color: whitesmoke;
+}
+
+.contacts {
+	
+	width:  40;
+	
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+	align-items: center;
+	
+	justify-content: space-between;
+	
+}
+
+.contacts > img {
+	
+	
+	
+	min-height: 32px;
+	min-width: 32px;
+	
+}

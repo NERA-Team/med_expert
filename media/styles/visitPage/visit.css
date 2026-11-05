@@ -1,0 +1,12 @@
+main {
+	width: 30%;
+	display: flex;
+	align-content: center;
+}
+
+main > wrap {
+	width: 98%;
+	margin: 0 auto;
+	align-items: center;
+	text-align: center;
+}
