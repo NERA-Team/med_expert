@@ -9,34 +9,8 @@ local.properties
 xcuserdata/
 *.xcuserstate
 DerivedData/
-
-# Python parser
-.venv/
-venv/
-__pycache__/
 *.py[cod]
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
-.coverage
-htmlcov/
-
-# Local secrets and environment settings
-.env
-.env.*
-!.env.example
-
-# Android / native build outputs
-.cxx/
-.externalNativeBuild/
-captures/
-
-# Xcode user state and Swift Package Manager cache
-*.xcuserdatad/
-.swiftpm/
-
-# SQLite temporary files (keep the bundled med_expert.db tracked)
-*.db-wal
-*.db-shm
-*.db-journal
-*.building
+__pycache__/
+.vscode/
+*env/
+*venv
