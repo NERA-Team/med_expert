@@ -1,0 +1,49 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run MedExpert desktop app",
+			"type": "shell",
+			"command": "./gradlew",
+			"args": [
+				":composeApp:run"
+			],
+			"isBackground": true,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Run MedExpert desktop app",
+			"type": "shell",
+			"command": "./gradlew",
+			"args": [
+				":composeApp:run"
+			],
+			"isBackground": true,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Diagnose MedExpert desktop error",
+			"type": "shell",
+			"command": "./gradlew",
+			"args": [
+				":composeApp:run"
+			],
+			"isBackground": true,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Run fixed MedExpert desktop app",
+			"type": "shell",
+			"command": "./gradlew",
+			"args": [
+				":composeApp:run"
+			],
+			"isBackground": true,
+			"problemMatcher": [],
+			"group": "build"
+		}
+	]
+}
