@@ -1,23 +1,34 @@
-import { app, BrowserWindow } from 'electron';
-import path from 'node:path';
-import started from 'electron-squirrel-startup';
+    import { app, BrowserWindow } from 'electron';
+    import path from 'node:path';
+    import started from 'electron-squirrel-startup';
+    import * as storage from "electron-store";
 
-// Handle creating/removing shortcuts on Windows when installing/uninstalling.
-if (started) {
-  app.quit();
-}
+    // Handle creating/removing shortcuts on Windows when installing/uninstalling.
+    if (started) {
+      app.quit();
+    }
 
-localStorage.setItem("page", "0")
+    // localStorage initialization
+    app.whenReady().then(() => {
 
-const createWindow = () => {
-  // Create the browser window.
-  const mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
-    webPreferences: {
-      preload: path.join(__dirname, 'preload.cjs'),
-    },
-  });
+      const page = storage.get("page") ?? "1";
+      if (!storage.isOpen()) storage.initialize();
+
+      window.addEventListener('beforeunload', () => {
+        storage.set("page", String(page));
+      });
+
+    });
+
+    const createWindow = () => {
+      // Create the browser window.
+      const mainWindow = new BrowserWindow({
+        width: 800,
+        height: 600,
+        webPreferences: {
+          preload: path.join(__dirname, 'preload.cjs'),
+        },
+      });
 
   // and load the index.html of the app.
   if (MAIN_WINDOW_VITE_DEV_SERVER_URL) {
