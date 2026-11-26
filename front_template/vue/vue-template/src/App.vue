@@ -1,45 +1,27 @@
 <script setup>
-    import { ref } from 'vue';
-    import { storage } from './preload.js';
+import { computed } from 'vue';
+import { useRoute } from 'vue-router';
 
-    const page = ref(storage.getPage() ?? "1");
-
+const route = useRoute();
+const title = computed(() => route.meta.title ?? 'Справочник педиатра');
 </script>
 
 <template>
-
-    <h1>Hello</h1>
-    <header>
-        <nav>
-            <RouterLink to="/" v-on:click="handle">Справочник педиатра</RouterLink>
-
-            <div class="header_text">
-                <h1 v-if="page === 0">Справочник педиатра</h1>
-                <h1 v-if="page === 1">Лекарства</h1>
-                <h1 v-if="page === 2">Лекарство</h1>
-                <h1 v-if="page === 4"></h1>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <RouterView />
-    </main>
+  <header>
+    <nav>
+      <RouterLink to="/">Справочник педиатра</RouterLink>
+      <h1 class="header_text">{{ title }}</h1>
+    </nav>
+  </header>
+  <main><RouterView /></main>
 </template>
 
 <style scoped>
-
-
-    header {
-        width: 100vh;
-        height: 15vh;
-            
-        background-color: #0F766E;
-            
-        display: inline-flex;
-        justify-content: space-between;
-    }
-
-    
-
+header {
+  width: 100%;
+  min-height: 15vh;
+  background-color: #0F766E;
+  display: flex;
+  align-items: center;
+}
 </style>
