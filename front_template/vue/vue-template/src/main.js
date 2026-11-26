@@ -7,6 +7,8 @@ if (started) {
   app.quit();
 }
 
+localStorage.setItem("page", "0")
+
 const createWindow = () => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
