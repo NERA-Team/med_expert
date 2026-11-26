@@ -4,12 +4,14 @@ import { useRoute } from 'vue-router';
 
 const route = useRoute();
 const title = computed(() => route.meta.title ?? 'Справочник педиатра');
+const page = '/'
+
 </script>
 
 <template>
   <header>
     <nav>
-      <RouterLink to="/">Справочник педиатра</RouterLink>
+      <RouterLink to={page} class="Icon"></RouterLink>
       <h1 class="header_text">{{ title }}</h1>
     </nav>
   </header>
