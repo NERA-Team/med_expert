@@ -11,7 +11,7 @@ const page = '/'
 <template>
   <header>
     <nav>
-      <RouterLink to={page}><div class="Icon"></div></RouterLink>
+      <router-link to={page}><div class="Icon"></div></router-link>
       <h1 class="header_text">{{ title }}</h1>
     </nav>
   </header>
@@ -59,6 +59,11 @@ const page = '/'
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+  }
+
+  main {
+    width: 100vw;
+    min-height: 85vh;
   }
 
 </style>
