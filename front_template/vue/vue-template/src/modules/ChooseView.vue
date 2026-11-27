@@ -148,10 +148,13 @@
 
     section > h2 {
         color: black;
+        font-size: 2.5vw;
+        font-weight: 800;
     }
 
     section > p {
         color: #c4c4c4;
+        font-size: 2vw;
     }
 
     .icon {
