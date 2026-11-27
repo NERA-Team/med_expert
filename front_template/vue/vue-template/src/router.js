@@ -3,10 +3,12 @@ import {createMemoryHistory, createRouter} from 'vue-router'
 
 import ChooseView from './modules/ChooseView.vue'
 import NotFound from './modules/NotFound.vue'
+import CuresView from './modules/CuresView.vue'
 
 const routes = [
 
     { path: '/', component: ChooseView, meta: { title: 'Справочник педиатора' } },
+    { path: '/cures', component: CuresView, meta: { title: 'Лекарства' } },
 
 
     {
