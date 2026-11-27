@@ -11,7 +11,7 @@ const page = '/'
 <template>
   <header>
     <nav>
-      <router-link to={page}><div class="Icon"></div></router-link>
+      <router-link to="/"><div class="Icon"></div></router-link>
       <h1 class="header_text">{{ title }}</h1>
     </nav>
   </header>
@@ -52,8 +52,8 @@ const page = '/'
   
   .Icon {
 
-    width: 8vw;
-    height: 8vh;
+    width: 8.5vw;
+    height: 8.5vh;
 
     background-image: url("./media/svg/logo.svg");
     background-size: contain;

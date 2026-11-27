@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-labelledby="title desc">
+  <title id="title">404 — Страница не найдена</title>
+  <desc id="desc">Открытая медицинская книга с медицинским крестом, цифрами 404 и увеличительным стеклом.</desc>
+
+  <g fill="none" stroke="#0F766E" stroke-width="15" stroke-linecap="round">
+    <path d="M92 166l32 40M104 208l40 13"/>
+    <path d="M744 112l-8 43M790 135l-31 34"/>
+  </g>
+  <path d="M286 92c0-45 30-70 67-70 40 0 67 27 67 65 0 28-17 46-44 66-23 17-31 29-31 51"
+        fill="none" stroke="#C4C4C4" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="345" cy="251" r="10" fill="#C4C4C4"/>
+
+  <ellipse cx="451" cy="520" rx="340" ry="17" fill="#C4C4C4" opacity=".18"/>
+
+  <path d="M108 286Q111 264 137 266L365 286Q420 291 450 330Q480 291 535 286L763 266Q789 264 792 286L826 486Q831 511 805 511L500 495Q470 493 450 514Q430 493 400 495L95 511Q69 511 74 486Z"
+        fill="#0F766E"/>
+
+  <path d="M128 285Q130 279 143 280L365 300Q418 305 439 338L439 477Q414 455 382 455L105 481Z"
+        fill="#FFFFFF" stroke="#C4C4C4" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M461 338Q482 305 535 300L757 280Q770 279 772 285L795 481L518 455Q486 455 461 477Z"
+        fill="#FFFFFF" stroke="#C4C4C4" stroke-width="6" stroke-linejoin="round"/>
+
+  <path d="M450 331L450 495" fill="none" stroke="#C4C4C4" stroke-width="6" stroke-linecap="round"/>
+  <path d="M105 481Q270 451 382 455Q423 456 450 489Q477 456 518 455Q630 451 795 481"
+        fill="none" stroke="#C4C4C4" stroke-width="6" stroke-linecap="round"/>
+
+  <path d="M239 342h43v-38h43v38h43v43h-43v38h-43v-38h-43z" fill="#0F766E"/>
+
+  <g fill="none" stroke="#C4C4C4" stroke-width="11" stroke-linecap="round">
+    <path d="M177 438l205 17"/>
+    <path d="M170 463l185 15"/>
+  </g>
+
+  <!-- 404 sits above the lens and remains fully readable -->
+  <text x="558" y="397" text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="91" font-weight="800" letter-spacing="-4"
+        fill="#0F766E">404</text>
+
+  <g fill="none" stroke="#C4C4C4" stroke-width="11" stroke-linecap="round">
+    <path d="M493 438l99-13"/>
+    <path d="M493 463l72-10"/>
+  </g>
+
+  <!-- Magnifier is moved to the far right and reduced -->
+  <g>
+    <path d="M722 472l43 46" fill="none" stroke="#0F766E" stroke-width="25" stroke-linecap="round"/>
+    <circle cx="690" cy="438" r="56" fill="#FFFFFF" stroke="#0F766E" stroke-width="13"/>
+    <circle cx="690" cy="438" r="45" fill="#FFFFFF" stroke="#C4C4C4" stroke-width="4"/>
+    <path d="M663 416Q674 395 694 390" fill="none" stroke="#C4C4C4" stroke-width="8" stroke-linecap="round"/>
+  </g>
+</svg>
