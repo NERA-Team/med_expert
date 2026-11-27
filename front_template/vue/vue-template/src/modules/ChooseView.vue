@@ -147,7 +147,7 @@
     }
 
     section > h2 {
-        color: black;
+        color: rgba(0, 0, 0, 0.8);
         font-size: 2.5vw;
         font-weight: 800;
     }

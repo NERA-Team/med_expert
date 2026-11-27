@@ -1,60 +1,67 @@
-    import { app, BrowserWindow } from 'electron';
-    import path from 'node:path';
-    import started from 'electron-squirrel-startup';
-    import * as storage from "electron-store";
+import { app, BrowserWindow, screen } from 'electron';
+import path from 'node:path';
+import started from 'electron-squirrel-startup';
+import * as storage from "electron-store";
 
-    // Handle creating/removing shortcuts on Windows when installing/uninstalling.
-    if (started) {
-      app.quit();
+if (started) {
+    app.quit();
+}
+
+
+function calculateNineSixteenSize() {
+    const primaryDisplay = screen.getPrimaryDisplay();
+    const width = primaryDisplay.bounds.height * 0.5;
+    const height = primaryDisplay.bounds.width * 0.5;
+    
+    return {
+        width,
+        height
+    };
+}
+
+const createWindow = () => {
+    const size = calculateNineSixteenSize();
+    
+    console.log(`Creating window with 9:16 ratio - Width: ${size.width}px, Height: ${size.height}px`); // ← для отладки
+    
+    const mainWindow = new BrowserWindow({
+        width: size.width,
+        height: size.height,
+        
+        minWidth: size.width * 0.85,
+        minHeight: size.height * 0.85,
+        
+        webPreferences: {
+            preload: path.join(__dirname, 'preload.cjs'),
+        },
+        
+        center: true,  
+        resizable: false,             
+    });
+
+    if (MAIN_WINDOW_VITE_DEV_SERVER_URL) {
+        mainWindow.loadURL(MAIN_WINDOW_VITE_DEV_SERVER_URL);
+    } else {
+        mainWindow.loadFile(
+            path.join(__dirname, `../renderer/${MAIN_WINDOW_VITE_NAME}/index.html`),
+        );
     }
 
-
-    const createWindow = () => {
-      // Create the browser window.
-      const mainWindow = new BrowserWindow({
-        width: 800,
-        height: 600,
-        webPreferences: {
-          preload: path.join(__dirname, 'preload.cjs'),
-        },
-      });
-
-  // and load the index.html of the app.
-  if (MAIN_WINDOW_VITE_DEV_SERVER_URL) {
-    mainWindow.loadURL(MAIN_WINDOW_VITE_DEV_SERVER_URL);
-  } else {
-    mainWindow.loadFile(
-      path.join(__dirname, `../renderer/${MAIN_WINDOW_VITE_NAME}/index.html`),
-    );
-  }
-
-  // Open the DevTools.
-  mainWindow.webContents.openDevTools();
+    mainWindow.webContents.openDevTools();
 };
 
-// This method will be called when Electron has finished
-// initialization and is ready to create browser windows.
-// Some APIs can only be used after this event occurs.
 app.whenReady().then(() => {
-  createWindow();
+    createWindow();
 
-  // On OS X it's common to re-create a window in the app when the
-  // dock icon is clicked and there are no other windows open.
-  app.on('activate', () => {
-    if (BrowserWindow.getAllWindows().length === 0) {
-      createWindow();
-    }
-  });
+    app.on('activate', () => {
+        if (BrowserWindow.getAllWindows().length === 0) {
+            createWindow();
+        }
+    });
 });
 
-// Quit when all windows are closed, except on macOS. There, it's common
-// for applications and their menu bar to stay active until the user quits
-// explicitly with Cmd + Q.
 app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') {
-    app.quit();
-  }
+    if (process.platform !== 'darwin') {
+        app.quit();
+    }
 });
-
-// In this file you can include the rest of your app's specific main process
-// code. You can also put them in separate files and import them here.
