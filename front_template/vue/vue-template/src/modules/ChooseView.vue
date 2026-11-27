@@ -42,4 +42,22 @@
         </section>
 
     </main>
+
+    <footer>
+
+        <h3>Этот справочник содержит информацию для медицинских специалистов. 
+           Данные носят информационный характер и не заменяют клиническое решение врача.</h3>
+
+        
+        <section>
+            <router-link to="/about"></router-link>
+            <router-link to="/contacts"></router-link>
+        </section>
+
+    </footer>
 </template>
+
+<style scoped>
+
+
+</style>
