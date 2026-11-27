@@ -8,17 +8,6 @@
       app.quit();
     }
 
-    // localStorage initialization
-    app.whenReady().then(() => {
-
-      const page = storage.get("page") ?? "1";
-      if (!storage.isOpen()) storage.initialize();
-
-      window.addEventListener('beforeunload', () => {
-        storage.set("page", String(page));
-      });
-
-    });
 
     const createWindow = () => {
       // Create the browser window.

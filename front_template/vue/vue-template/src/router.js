@@ -5,7 +5,7 @@ import ChooseView from './modules/ChooseView.vue'
 
 const routes = [
 
-    { path: '/', component: ChooseView, meta: { title: 'Лекарства' } }
+    { path: '/', component: ChooseView, meta: { title: 'Справочник педиатора' } }
 
 ]
 
